@@ -170,6 +170,11 @@ ul {
     background-color: #7030A0;
     color: #ffffff;
 }
+
+.tech-integration {
+    background-color: #44546A;
+    color: #ffffff;
+}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active:focus {
