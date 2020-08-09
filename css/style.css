@@ -128,6 +128,48 @@ ul {
     background-color : #2a54f5;
     }
 
+    .technology {
+        padding: 14px 30px 11px;
+        font-size: 14px;
+        border-radius: 0;
+    border: 0;
+    text-transform: uppercase;
+    display: inline-block;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+    
+    }
+    .tech-mobile {
+        background-color : #2a54f5;
+        color: #ffffff;
+        }
+        .tech-cloud {
+            background-color : #00B050;
+            color: #ffffff;
+            }
+
+            .tech-web {
+                background-color: #BF9000;
+                color: #ffffff;
+            }
+.tech-server {
+    background-color: #548235;
+    color: #ffffff;
+}
+.tech-storage {
+    background-color: #7030A0;
+    color: #ffffff;
+}
 .btn-primary:hover,
 .btn-primary:focus,
 .btn-primary:active:focus {
@@ -362,10 +404,11 @@ button:focus,
     margin-bottom : 20px;
     }
 
-.expertise-item h3 {
+.expertise-item .technology {
     margin-bottom : 5px;
     font-weight   : 700;
     }
+
 
 /*-------------------
  * Skills Progressbar
@@ -434,10 +477,10 @@ button:focus,
     padding    : 30px 15px 5px;
     width      : 100%;
     background : -webkit-linear-gradient(
-            top,
-            transparent 0%,
-            rgba(0, 0, 0, 0.5) 100%
-    );
+        top,
+        transparent 1%,
+        rgba(0, 0, 0, 1) 100%
+)
     }
 
 .portfolio-item .portfolio-info h3 {
