@@ -128,6 +128,12 @@ ul {
     background-color : #2a54f5;
     }
 
+    @media (max-width: 767px) {
+        .technology {
+            padding: 7px 15px 5px !important;
+        }
+    }
+
     .technology {
         padding: 14px 30px 11px;
         font-size: 14px;
