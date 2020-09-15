@@ -518,6 +518,11 @@ button:focus,
     color : #ffffff;
     }
 
+    .portfolio-item .portfolio-info small.link {
+        text-decoration: underline;
+        float: right;
+        }
+
 .portfolio-item:hover .portfolio-info {
     background : -webkit-linear-gradient(
             top,
