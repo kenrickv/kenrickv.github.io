@@ -22,6 +22,10 @@
 
     <!-- Style CSS -->
     <link href="css/style.css" rel="stylesheet">
+
+    <!-- fontawesome -->
+    <script src="https://use.fontawesome.com/5db533dd56.js"></script>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar">
@@ -107,103 +111,118 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="section-title">
-                                    <h2>Technologies</h2>
+                                        <div id="sortgroup-expertise" class="btn-group">
+                                            <button type="button" class="btn btn-secondary active"
+                                                data-value="original-order">Expertise by Technology</button>
+                                            <button type="button" class="btn btn-secondary" data-value="yeardesc">Most
+                                                Recently Learned</button>
+                                            <button type="button" class="btn btn-secondary" data-value="yearasc">Year
+                                                learned
+                                                (desc)</button>
+                                        </div>
+
+                                    </h2>
                                 </div>
+
+
+
                             </div>
+
                         </div>
                         <!-- .row -->
                         <div class="row">
-                            <div class="expertise-item col-md-12">
+                            <div id="expertise" class="expertise-item col-md-12">
                                 <h3>Mobile</h3>
-                                <div class="technology tech-mobile">iOS</div>
-                                <div class="technology tech-mobile">Android</div>
-                                <div class="technology tech-mobile">React Native</div>
-                                <div class="technology tech-mobile">Unity</div>
-                                <div class="technology tech-mobile">Ionic</div>
-                                <div class="technology tech-mobile">Flutter</div>
-                                <div class="technology tech-mobile">Xamarin</div>
-                                <div class="technology tech-mobile">Cordova</div>
+                                <div data-year="2012" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>iOS</div>
+                                <div data-year="2012" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Android</div>
+                                <div data-year="2017" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>React Native</div>
+                                <div data-year="2017" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Unity</div>
+                                <div data-year="2016" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Ionic</div>
+                                <div data-year="2019" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Flutter</div>
+                                <div data-year="2017" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Xamarin</div>
+                                <div data-year="2015" class="technology tech-mobile"><i class="fa fa-mobile" aria-hidden="true"></i>Cordova</div>
 
                                 <h3>Cloud</h3>
-                                <div class="technology tech-cloud">AWS</div>
-                                <div class="technology tech-cloud">Azure</div>
-                                <div class="technology tech-cloud">Hasura</div>
-                                <div class="technology tech-cloud">Heroku</div>
-                                <div class="technology tech-cloud">Google Cloud</div>
+                                <div data-year="2012" class="technology tech-cloud"><i class="fa fa-cloud" aria-hidden="true"></i>AWS</div>
+                                <div data-year="2017" class="technology tech-cloud"><i class="fa fa-cloud" aria-hidden="true"></i>Azure</div>
+                                <div data-year="2020" class="technology tech-cloud"><i class="fa fa-cloud" aria-hidden="true"></i>Hasura</div>
+                                <div data-year="2017" class="technology tech-cloud"><i class="fa fa-cloud" aria-hidden="true"></i>Heroku</div>
+                                <div data-year="2018" class="technology tech-cloud"><i class="fa fa-cloud" aria-hidden="true"></i>Google Cloud</div>
 
                                 <h3>Server</h3>
-                                <div class="technology tech-server">NodeJS</div>
-                                <div class="technology tech-server">Python</div>
-                                <div class="technology tech-server">.Net</div>
-                                <div class="technology tech-server">C#</div>
-                                <div class="technology tech-server">Java</div>
-                                <div class="technology tech-server">Springboot</div>
-                                <div class="technology tech-server">PHP</div>
-                                <div class="technology tech-server">SocketIO</div>
-                                <div class="technology tech-server">GraphQL</div>
-                                <div class="technology tech-server">Codeigniter</div>
-                                <div class="technology tech-server">gRPC</div>
+                                <div data-year="2012" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>NodeJS</div>
+                                <div data-year="2017" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>Python</div>
+                                <div data-year="2018" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>.Net</div>
+                                <div data-year="2012" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>C#</div>
+                                <div data-year="2018" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>Java</div>
+                                <div data-year="2018" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>Springboot</div>
+                                <div data-year="2010" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>PHP</div>
+                                <div data-year="2012" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>SocketIO</div>
+                                <div data-year="2020" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>GraphQL</div>
+                                <div data-year="2010" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>Codeigniter</div>
+                                <div data-year="2020" class="technology tech-server"><i class="fa fa-server" aria-hidden="true"></i>gRPC</div>
 
                                 <h3>Front-end</h3>
-                                <div class="technology tech-web">ReactJS</div>
-                                <div class="technology tech-web">Typescript</div>
-                                <div class="technology tech-web">Javascript</div>
-                                <div class="technology tech-web">Bootstrap</div>
-                                <div class="technology tech-web">Angular</div>
-                                <div class="technology tech-web">jQuery</div>
-                                <div class="technology tech-web">SCSS</div>
-                                <div class="technology tech-web">Google AMP</div>
+                                <div data-year="2018" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>ReactJS</div>
+                                <div data-year="2020" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>Typescript</div>
+                                <div data-year="2010" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>Javascript</div>
+                                <div data-year="2011" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>Bootstrap</div>
+                                <div data-year="2013" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>Angular</div>
+                                <div data-year="2010" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>jQuery</div>
+                                <div data-year="2012" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>SCSS</div>
+                                <div data-year="2019" class="technology tech-web"><i class="fa fa-laptop" aria-hidden="true"></i>Google AMP</div>
 
                                 <h3>Databases</h3>
-                                <div class="technology tech-storage">MySQL</div>
-                                <div class="technology tech-storage">SQL Server</div>
-                                <div class="technology tech-storage">Redis</div>
-                                <div class="technology tech-storage">Postgres</div>
-                                <div class="technology tech-storage">MongoDB</div>
-                                <div class="technology tech-storage">DynamoDB</div>
-                                <div class="technology tech-storage">CosmosDB</div>
-                                <div class="technology tech-storage">Aurora</div>
+                                <div data-year="2010" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>MySQL</div>
+                                <div data-year="2010" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>SQL Server</div>
+                                <div data-year="2013" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>Redis</div>
+                                <div data-year="2017" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>Postgres</div>
+                                <div data-year="2014" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>MongoDB</div>
+                                <div data-year="2012" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>DynamoDB</div>
+                                <div data-year="2018" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>CosmosDB</div>
+                                <div data-year="2018" class="technology tech-storage"><i class="fa fa-database" aria-hidden="true"></i>Aurora</div>
 
                                 <h3>Devops</h3>
-                                <div class="technology tech-devops">Jenkins</div>
-                                <div class="technology tech-devops">Docker</div>
-                                <div class="technology tech-devops">Kubernetes</div>
-                                <div class="technology tech-devops">Terraform</div>
-                                <div class="technology tech-devops">AWS CloudFormation</div>
-                                <div class="technology tech-devops">AWS CodePipeline</div>
-                                <div class="technology tech-devops">Azure DevOps</div>
-                                <div class="technology tech-devops">Bitrise</div>
-                                <div class="technology tech-devops">GitLab</div>
+                                <div data-year="2015" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Jenkins</div>
+                                <div data-year="2018" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Docker</div>
+                                <div data-year="2018" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Kubernetes</div>
+                                <div data-year="2020" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Terraform</div>
+                                <div data-year="2013" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>AWS CloudFormation</div>
+                                <div data-year="2018" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>AWS CodePipeline</div>
+                                <div data-year="2019" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Azure DevOps</div>
+                                <div data-year="2020" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>Bitrise</div>
+                                <div data-year="2017" class="technology tech-devops"><i class="fa fa-code-fork" aria-hidden="true"></i>GitLab</div>
 
                                 <h3>Integrations, SDKs</h3>
-                                <div class="technology tech-integration">Facebook</div>
-                                <div class="technology tech-integration">Stripe</div>
-                                <div class="technology tech-integration">Twitter</div>
-                                <div class="technology tech-integration">Google</div>
-                                <div class="technology tech-integration">LinkedIn</div>
-                                <div class="technology tech-integration">Salesforce</div>
-                                <div class="technology tech-integration">Pega</div>
-                                <div class="technology tech-integration">PayPal</div>
-                                <div class="technology tech-integration">Okta</div>
-                                <div class="technology tech-integration">AuthO</div>
-                                <div class="technology tech-integration">Dropbox</div>
-                                <div class="technology tech-integration">New Relic</div>
-                                <div class="technology tech-integration">Firebase</div>
-                                <div class="technology tech-integration">Loggly</div>
-                                <div class="technology tech-integration">Datadog</div>
-                                <div class="technology tech-integration">App Center</div>
-                                <div class="technology tech-integration">Mixpanel</div>
-                                <div class="technology tech-integration">Wordpress</div>
-                                <div class="technology tech-integration">Joomla</div>
-                                <div class="technology tech-integration">AEM</div>
-                                <div class="technology tech-integration">Sitecore</div>
-                                <div class="technology tech-integration">Shopify</div>
-                                <div class="technology tech-integration">Twilio</div>
-                                <div class="technology tech-integration">Sirikit</div>
-                                <div class="technology tech-integration">Blockchain Hyperledger Aries</div>
-                                <div class="technology tech-integration">Vimeo</div>
-                                <div class="technology tech-integration">Dialogflow, LUIS</div>
-                                <div class="technology tech-integration">RASA</div>
+                                <div data-year="2011" class="technology tech-integration"><i class="fa fa-facebook" aria-hidden="true"></i>Facebook</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-cc-stripe" aria-hidden="true"></i>Stripe</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-twitter" aria-hidden="true"></i>Twitter</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-google" aria-hidden="true"></i>Google</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-linkedin" aria-hidden="true"></i>LinkedIn</div>
+                                <div data-year="2017" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Salesforce</div>
+                                <div data-year="2018" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Pega</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-paypal" aria-hidden="true"></i>PayPal</div>
+                                <div data-year="2019" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Okta</div>
+                                <div data-year="2016" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>AuthO</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-dropbox" aria-hidden="true"></i>Dropbox</div>
+                                <div data-year="2012" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>New Relic</div>
+                                <div data-year="2016" class="technology tech-integration"><i class="fa fa-google" aria-hidden="true"></i>Firebase</div>
+                                <div data-year="2020" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Loggly</div>
+                                <div data-year="2020" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Datadog</div>
+                                <div data-year="2018" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>App Center</div>
+                                <div data-year="2013" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Mixpanel</div>
+                                <div data-year="2016" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Wordpress</div>
+                                <div data-year="2010" class="technology tech-integration"><i class="fa fa-joomla" aria-hidden="true"></i>Joomla</div>
+                                <div data-year="2019" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>AEM</div>
+                                <div data-year="2017" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Sitecore</div>
+                                <div data-year="2018" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Shopify</div>
+                                <div data-year="2019" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Twilio</div>
+                                <div data-year="2018" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Sirikit</div>
+                                <div data-year="2020" class="technology tech-integration"><i class="fa fa-industry" aria-hidden="true"></i>Blockchain Hyperledger Aries
+                                </div>
+                                <div data-year="2014" class="technology tech-integration"><i class="fa fa-vimeo" aria-hidden="true"></i>Vimeo</div>
+                                <div data-year="2017" class="technology tech-integration"><i class="fa fa-comments" aria-hidden="true"></i>Dialogflow, LUIS</div>
+                                <div data-year="2020" class="technology tech-integration"><i class="fa fa-comments" aria-hidden="true"></i>RASA</div>
                             </div>
                         </div>
 
@@ -615,6 +634,7 @@
     </div>
     <!-- #main-wrapper -->
 
+
     <!-- jquery -->
     <script src="js/jquery-2.1.4.min.js"></script>
 
@@ -629,7 +649,12 @@
      https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-analytics.js"></script>
 
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
     <script>
+        $("#expertise .technology").each(function () {
+            $(this).html($(this).html() + " <span>(" + $(this).attr('data-year') + ")</span>")
+        })
+
         // Your web app's Firebase configuration
         // For Firebase JS SDK v7.20.0 and later, measurementId is optional
         var firebaseConfig = {
@@ -645,6 +670,43 @@
         // Initialize Firebase
         firebase.initializeApp(firebaseConfig);
         firebase.analytics();
+        
+        $("#expertise .technology span").hide()
+        let filterSelector = '*';
+        let $grid = $('#expertise').isotope({
+            itemSelector: '.technology',
+            layoutMode: 'fitRows',
+            sortBy: 'technology',
+            getSortData: {
+                yearasc: '[data-year]',
+                yeardesc: function (itemElem) {
+                    var year = parseInt($(itemElem).attr('data-year'));
+                    return year * -1;
+                }
+            },
+        });
+        var $items = $grid.find('.technology');
+
+
+
+        $('#sortgroup-expertise .btn').on('click', function () {
+
+            let sortSelector = $(this).attr('data-value');
+
+            if (sortSelector == "original-order") {
+                $("#expertise .technology span").hide()
+            } else {
+                $("#expertise .technology span").show()
+            }
+
+            $grid.isotope({ sortBy: sortSelector });
+
+            $("#sortgroup-expertise .btn").removeClass("active")
+            $(this).addClass("active")
+
+
+        });
+        $("#expertise h3").hide()
     </script>
 </body>
 

@@ -155,6 +155,10 @@ ul {
     background-image: none;
     
     }
+    .technology .fa {
+        padding: 0 10px;
+        font-size: 25px;
+    }
     .tech-mobile {
         background-color : #2a54f5;
         color: #ffffff;
@@ -531,6 +535,15 @@ button:focus,
     );
     }
 
+#sortgroup-expertise {
+    text-align: center;
+}
+    #sortgroup-expertise span {
+        display: block;
+        padding: 2px 5px;   
+        cursor: pointer;
+        outline: none;
+    }
 /*-------------------
  * Content Item
  *-------------------*/
