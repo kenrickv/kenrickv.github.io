@@ -323,7 +323,7 @@
    #MHblogBtn{
    padding-left: 22% !important;
    }
-   .mcafeeHeader #loginbtn{
+   .mcafeeHeader #MHloginbtn{
    font-size: 23px !important;
    }
    .mcafeeHeader .MHtopnav.responsive a {
@@ -465,7 +465,7 @@
    padding: 0px 3.05em !important;
    font-size: 14px;
    }
-   .mcafeeHeader #loginbtn {
+   .mcafeeHeader #MHloginbtn {
    border: 1px solid #fff;
    border-radius: 26px;
    padding: 3px 30px !important;
@@ -688,9 +688,9 @@
       <div class="MHicons-wrap" id="MHiconsWrap">
          <div>
             <a id="MHblogBtn" href="https://www.mcafee.com/blogs" class="MHentlink" target="_blank">Blog</a>
-            <a id="loginbtn" href="https://home.mcafee.com/Secure/MyAccount/DashBoard.aspx?culture=en-us" class="MHentlink" target="_blank">Login</a>
+            <a id="MHloginbtn" href="https://home.mcafee.com/Secure/MyAccount/DashBoard.aspx?culture=en-us" class="MHentlink" target="_blank">Login</a>
             <div id="MHtnav9" class="MHdropdown open show">
-               <a class="MHdropdown-toggle" id="moreMHicon" onclick=" event.stopPropagation(); event.cancelBubble = true; macfee_MoreOpenFunction();">
+               <a class="MHdropdown-toggle" id="MHmoreicon" onclick=" event.stopPropagation(); event.cancelBubble = true; macfee_MoreOpenFunction();">
                   <span>More </span> 
                   <svg xmlns="https://www.w3.org/2000/svg" version="1.1" width="29" height="29" class="MHmoreSvg" viewBox="0 0 768 768">
                      <path fill="#fff" d="M511.5 640.5v-129h129v129h-129zM511.5 448.5v-129h129v129h-129zM319.5 256.5v-129h129v129h-129zM511.5 127.5h129v129h-129v-129zM319.5 448.5v-129h129v129h-129zM127.5 448.5v-129h129v129h-129zM127.5 640.5v-129h129v129h-129zM319.5 640.5v-129h129v129h-129zM127.5 256.5v-129h129v129h-129z" class="MHpathicon">
@@ -739,27 +739,27 @@
 <script>
    var MHmydropdown = document.getElementById("MHmydropdown");
    var MHmydropdownSupport = document.getElementById("MHmydropdownSupport");
-   var arMHrow1 = document.getElementById("MHuparrow1");
-   var arMHrow2 = document.getElementById("MHuparrow2");
-   var x = document.getElementById("MHmytopnav");
+   var MHarrow1 = document.getElementById("MHuparrow1");
+   var MHarrow2 = document.getElementById("MHuparrow2");
+   var MHmytopnav = document.getElementById("MHmytopnav");
    var MHdropbtnAbout = document.getElementById("MHdropbtnAbout");
    var MHdropbtnSupport = document.getElementById("MHdropbtnSupport");
    var MHnavItem = document.getElementsByClassName("MHnavItem");
    var MHmoreMenu = document.getElementById("MHmoreMenu");
    var MHnavWrap = document.getElementById("MHnavWrap");
    var MHcloseSlideMenu = document.getElementById("MHcloseSlideMenu");
-   var loginbtn = document.getElementById("loginbtn");
+   var MHloginbtn = document.getElementById("MHloginbtn");
    var MHblogBtn=document.getElementById("MHblogBtn");
-   var moreMHicon = document.getElementById("moreMHicon");
+   var MHmoreicon = document.getElementById("MHmoreicon");
    var MHiconsWrap=document.getElementById("MHiconsWrap");
    var MHnavItems=document.getElementById("MHnavItems");
    var MHdropdown_about=document.getElementById("MHdropdown_about");
    var MHdropdown_support=document.getElementById("MHdropdown_support");
     
-   var windowSize = window.outerWidth;
-   var windowResize;
+   var MHwindowSize = window.outerWidth;
+   var MHwindowResize;
    
-   function closeOpenMenus(currentTarget) {
+   function MHcloseOpenMenus(currentTarget) {
    	if(currentTarget == "more") {
    		if(document.getElementById("MHmydropdown").style.opacity == 1) {
    			mcafee_DropClick("MHmydropdown")
@@ -785,13 +785,13 @@
    }
    
    function macfee_MoreOpenFunction() {
-   	closeOpenMenus("more");
+   	MHcloseOpenMenus("more");
    	document.getElementById("MHtnav9").classList.toggle("moreTrans");
    	MHmoreMenu.classList.toggle("menuTrans");
-   	windowSize = window.innerWidth;
+   	MHwindowSize = window.innerWidth;
    
-   	if(x.classList.contains('responsive')) {
-   		if(windowSize<601){
+   	if(MHmytopnav.classList.contains('responsive')) {
+   		if(MHwindowSize<601){
    			MHiconsWrap.classList.add("moreWhileSmall");
    		}
    		MHnavItems.style.borderBottom="none";
@@ -804,10 +804,10 @@
    			MHdropbtnSupport.style.display = "none";
    			MHdropbtnAbout.style.display = "none";
    			MHcloseSlideMenu.style.display = "none";
-   			loginbtn.style.display = "none";
+   			MHloginbtn.style.display = "none";
    			MHblogBtn.style.display = "none";
    		} else {
-   			if(windowSize<601){
+   			if(MHwindowSize<601){
    			MHiconsWrap.classList.remove("moreWhileSmall");
    		}
    		MHnavItems.style.borderBottom="1px solid #666";
@@ -818,7 +818,7 @@
    			MHdropbtnSupport.style.display = "block";
    			MHdropbtnAbout.style.display = "block";
    			MHcloseSlideMenu.style.display = "block";
-   			loginbtn.style.display = "block";
+   			MHloginbtn.style.display = "block";
    			MHblogBtn.style.display = "block";
    
    		}
@@ -830,15 +830,15 @@
    function mcafee_closeMHmoreMenu() {
    	document.getElementById("MHtnav9").classList.toggle("moreTrans");
    	MHmoreMenu.classList.toggle("menuTrans");
-   	windowSize = window.innerWidth;
+   	MHwindowSize = window.innerWidth;
    
-   	if(x.classList.contains('responsive')) {
+   	if(MHmytopnav.classList.contains('responsive')) {
    		
    		MHnavWrap.style.display = "block";
    	}
    
-   	loginbtn.style.display = "block";
-   	moreMHicon.style.display = "block";
+   	MHloginbtn.style.display = "block";
+   	MHmoreicon.style.display = "block";
    	MHblogBtn.style.display = "block";
    }
    
@@ -856,16 +856,16 @@
    	}
    }
    
-   function resize() {
-   	windowResize = window.outerWidth;
-   	if(windowSize > 1024) {
-   		if(windowResize < 1024) {
-   			windowSize = windowResize;
+   function MHresize() {
+   	MHwindowResize = window.outerWidth;
+   	if(MHwindowSize > 1024) {
+   		if(MHwindowResize < 1024) {
+   			MHwindowSize = MHwindowResize;
    			MHmoreMenu.classList.remove("menuTrans");
    			if(MHmoreMenu.classList.contains("MHdropMenuRes")) {
    				MHmoreMenu.classList.remove("MHdropMenuRes");
    			}
-   			if(!x.classList.contains("responsive")) {
+   			if(!MHmytopnav.classList.contains("responsive")) {
    				for(var i = 0; i < MHnavItem.length; i++) {
    					MHnavItem[i].style.display = "none";
    				}
@@ -879,32 +879,32 @@
    				MHdropbtnAbout.style.display = "block";
    				MHdropbtnSupport.style.display = "block";
    				MHcloseSlideMenu.style.display = "block";
-   				loginbtn.style.display = "block";
+   				MHloginbtn.style.display = "block";
    				MHblogBtn.style.display = "block";
    
    			}
-   			if(arMHrow1.classList.contains("fa-angle-down")) {
-   				arMHrow1.classList.toggle("fa-angle-right");
+   			if(MHarrow1.classList.contains("fa-angle-down")) {
+   				MHarrow1.classList.toggle("fa-angle-right");
    			}
-   			if(arMHrow2.classList.contains("fa-angle-down")) {
-   				arMHrow2.classList.toggle("fa-angle-right");
+   			if(MHarrow2.classList.contains("fa-angle-down")) {
+   				MHarrow2.classList.toggle("fa-angle-right");
    			}
    			if(MHmydropdownSupport.classList.contains('MHdropdownMain')) {
    				MHmydropdownSupport.classList.remove('MHdropdownMain');
-   				arMHrow2.classList.toggle("fa-angle-up");
-   				arMHrow2.classList.toggle("fa-angle-down");
+   				MHarrow2.classList.toggle("fa-angle-up");
+   				MHarrow2.classList.toggle("fa-angle-down");
    			}
    			if(MHmydropdown.classList.contains('MHdropdownMain')) {
    				MHmydropdown.classList.remove('MHdropdownMain');
-   				arMHrow1.classList.toggle("fa-angle-up");
-   				arMHrow1.classList.toggle("fa-angle-down");
+   				MHarrow1.classList.toggle("fa-angle-up");
+   				MHarrow1.classList.toggle("fa-angle-down");
    			}
    		} 
    	} else {
-   		if(windowResize > 1024) {
-   			windowSize = windowResize;
+   		if(MHwindowResize > 1024) {
+   			MHwindowSize = MHwindowResize;
    			
-   			x.classList.remove('responsive');
+   			MHmytopnav.classList.remove('responsive');
    			
    			if(document.getElementById("MHmenuicon").classList.contains("change")) {
    				document.getElementById("MHmenuicon").classList.remove("change");
@@ -916,52 +916,52 @@
    			MHdropbtnAbout.style.display = "block";
    			MHdropbtnSupport.style.display = "block";
    			MHcloseSlideMenu.style.display = "block";
-   			loginbtn.style.display = "block";
+   			MHloginbtn.style.display = "block";
    			MHblogBtn.style.display = "block";
    
-   			if(arMHrow1.classList.contains("fa-angle-right") || arMHrow1.classList.contains("fa-angle-left")) {
-   				arMHrow1.classList.remove("fa-angle-right");
-   				arMHrow1.classList.remove("fa-angle-left");
-   				arMHrow1.classList.add("fa-angle-down");
+   			if(MHarrow1.classList.contains("fa-angle-right") || MHarrow1.classList.contains("fa-angle-left")) {
+   				MHarrow1.classList.remove("fa-angle-right");
+   				MHarrow1.classList.remove("fa-angle-left");
+   				MHarrow1.classList.add("fa-angle-down");
    			}
-   			if(arMHrow2.classList.contains("fa-angle-right") || arMHrow2.classList.contains("fa-angle-left")) {
-   				arMHrow2.classList.remove("fa-angle-right");
-   				arMHrow2.classList.remove("fa-angle-left");
-   				arMHrow2.classList.add("fa-angle-down");
+   			if(MHarrow2.classList.contains("fa-angle-right") || MHarrow2.classList.contains("fa-angle-left")) {
+   				MHarrow2.classList.remove("fa-angle-right");
+   				MHarrow2.classList.remove("fa-angle-left");
+   				MHarrow2.classList.add("fa-angle-down");
    			}
    		}
    	}
    }
-   window.onresize = resize;
+   window.onresize = MHresize;
    
    function mcafee_MainMenuClick() {
-   	windowSize=window.innerWidth;
+   	MHwindowSize=window.innerWidth;
    	document.getElementById("MHmenuicon").classList.toggle("change");
-   	if(arMHrow1.classList.contains("fa-angle-down")) {
-   		arMHrow1.classList.toggle("fa-angle-down");
-   		arMHrow1.classList.add("fa-angle-right");
+   	if(MHarrow1.classList.contains("fa-angle-down")) {
+   		MHarrow1.classList.toggle("fa-angle-down");
+   		MHarrow1.classList.add("fa-angle-right");
    	} else {
-   		arMHrow1.classList.add("fa-angle-right");
+   		MHarrow1.classList.add("fa-angle-right");
    	}
-   	if(arMHrow2.classList.contains("fa-angle-down")) {
-   		arMHrow2.classList.toggle("fa-angle-down");
-   		arMHrow2.classList.add("fa-angle-right");
+   	if(MHarrow2.classList.contains("fa-angle-down")) {
+   		MHarrow2.classList.toggle("fa-angle-down");
+   		MHarrow2.classList.add("fa-angle-right");
    	} else {
-   		arMHrow2.classList.add("fa-angle-right");
+   		MHarrow2.classList.add("fa-angle-right");
    	}
-   	if(x.className === "MHtopnav") {
-   		x.className += " responsive";
+   	if(MHmytopnav.className === "MHtopnav") {
+   		MHmytopnav.className += " responsive";
    		for(var i = 0; i < MHnavItem.length; i++) {
    			MHnavItem[i].style.display = "block";
    		}
-   		if(windowSize<601){
+   		if(MHwindowSize<601){
    			MHiconsWrap.classList.remove("moreWhileSmall");
    		}
    		MHdropbtnAbout.style.display = "block";
    		MHdropbtnSupport.style.display = "block";
    		MHcloseSlideMenu.style.display = "block";
-   		loginbtn.style.display = "block";
-   		moreMHicon.style.display = "block";
+   		MHloginbtn.style.display = "block";
+   		MHmoreicon.style.display = "block";
    		MHblogBtn.style.display = "block";
    		MHnavItems.style.borderBottom="1px solid #666";
    
@@ -970,7 +970,7 @@
    			document.getElementById("MHtnav9").classList.remove("MHmoreToggle");
    		}
    	} else {
-   		x.className = "MHtopnav";
+   		MHmytopnav.className = "MHtopnav";
    		for(var i = 0; i < MHnavItem.length; i++) {
    			MHnavItem[i].style.display = "none";
    		}
@@ -993,8 +993,8 @@
    }
    
    function mcafee_DropClick(econtentId) {
-   	windowSize = window.outerWidth;
-   	closeOpenMenus(econtentId);
+   	MHwindowSize = window.outerWidth;
+   	MHcloseOpenMenus(econtentId);
    	if(document.getElementById(econtentId).style.opacity == 1) {
    		mcafeeHeaderfadeOut(document.getElementById(econtentId), 4, "MHdropdownMain")
    	} else {
@@ -1002,24 +1002,24 @@
    	}
    	document.getElementById(econtentId).classList.toggle("MHdropdownMain");
    
-   	arMHrow1.parentElement.parentElement.classList.remove("MHopen");
-   	arMHrow2.parentElement.parentElement.classList.remove("MHopen");
+   	MHarrow1.parentElement.parentElement.classList.remove("MHopen");
+   	MHarrow2.parentElement.parentElement.classList.remove("MHopen");
    	if(document.getElementById(econtentId).classList.contains("MHdropdownMain")) {
    		document.getElementById(econtentId).parentElement.classList.add("MHopen");
    	}
    	
    	if(econtentId == "MHmydropdown") {
-   		if(x.classList.contains('responsive')) {
+   		if(MHmytopnav.classList.contains('responsive')) {
    			document.getElementById(econtentId).classList.toggle("MHfirst-dropdown-fixer");
-   			arMHrow1.classList.toggle("fa-angle-right");
-   			arMHrow1.classList.toggle("fa-angle-left");
+   			MHarrow1.classList.toggle("fa-angle-right");
+   			MHarrow1.classList.toggle("fa-angle-left");
    			if(MHmydropdown.classList.contains("MHdropdownMain")) {
    				for(var i = 0; i < MHnavItem.length; i++) {
    					MHnavItem[i].style.display = "none";
    				}
    				MHdropbtnSupport.style.display = "none";
-   				moreMHicon.style.display = "none";
-   				loginbtn.style.display = "none";
+   				MHmoreicon.style.display = "none";
+   				MHloginbtn.style.display = "none";
    				MHblogBtn.style.display = "none";
    				MHnavItems.style.borderBottom="1px solid #666";
    
@@ -1031,32 +1031,32 @@
    					MHnavItem[i].style.display = "block";
    				}
    				MHdropbtnSupport.style.display = "block";
-   				moreMHicon.style.display = "block";
-   				loginbtn.style.display = "block";
+   				MHmoreicon.style.display = "block";
+   				MHloginbtn.style.display = "block";
    				MHblogBtn.style.display = "block";
    
    			}
    		} else {
-   			arMHrow1.classList.toggle("fa-angle-up");
-   			arMHrow1.classList.toggle("fa-angle-down");
+   			MHarrow1.classList.toggle("fa-angle-up");
+   			MHarrow1.classList.toggle("fa-angle-down");
    		}
    		if(MHmydropdownSupport.classList.contains('MHdropdownMain')) {
    			MHmydropdownSupport.classList.remove('MHdropdownMain');
-   			arMHrow2.classList.toggle("fa-angle-up");
-   			arMHrow2.classList.toggle("fa-angle-down");
+   			MHarrow2.classList.toggle("fa-angle-up");
+   			MHarrow2.classList.toggle("fa-angle-down");
    		}
    	} else {
-   		if(x.classList.contains('responsive')) {
+   		if(MHmytopnav.classList.contains('responsive')) {
    			document.getElementById(econtentId).classList.toggle("MHfirst-dropdown-fixer");
-   			arMHrow2.classList.toggle("fa-angle-right");
-   			arMHrow2.classList.toggle("fa-angle-left");
+   			MHarrow2.classList.toggle("fa-angle-right");
+   			MHarrow2.classList.toggle("fa-angle-left");
    			if(MHmydropdownSupport.classList.contains("MHdropdownMain")) {
    				for(var i = 0; i < MHnavItem.length; i++) {
    					MHnavItem[i].style.display = "none";
    				}
    				MHdropbtnAbout.style.display = "none";
-   				moreMHicon.style.display = "none";
-   				loginbtn.style.display = "none";
+   				MHmoreicon.style.display = "none";
+   				MHloginbtn.style.display = "none";
    				MHblogBtn.style.display = "none";
    
    			} else {
@@ -1064,19 +1064,19 @@
    					MHnavItem[i].style.display = "block";
    				}
    				MHdropbtnAbout.style.display = "block";
-   				moreMHicon.style.display = "block";
-   				loginbtn.style.display = "block";
+   				MHmoreicon.style.display = "block";
+   				MHloginbtn.style.display = "block";
    				MHblogBtn.style.display = "block";
    
    			}
    		} else {
-   			arMHrow2.classList.toggle("fa-angle-up");
-   			arMHrow2.classList.toggle("fa-angle-down");
+   			MHarrow2.classList.toggle("fa-angle-up");
+   			MHarrow2.classList.toggle("fa-angle-down");
    		}
    		if(MHmydropdown.classList.contains('MHdropdownMain')) {
    			MHmydropdown.classList.remove('MHdropdownMain');
-   			arMHrow1.classList.toggle("fa-angle-up");
-   			arMHrow1.classList.toggle("fa-angle-down");
+   			MHarrow1.classList.toggle("fa-angle-up");
+   			MHarrow1.classList.toggle("fa-angle-down");
    		}
    	}
    }
