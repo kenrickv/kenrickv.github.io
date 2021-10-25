@@ -1,0 +1,1160 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+<style>
+   body {
+   margin: 0;
+   font-family: 'Open Sans', sans-serif, Helvetica, Arial, sans-serif;
+   }
+   .mcafeeHeader {
+   background-color: #060606;
+   }
+   .mcafeeHeader .MHtopnav {
+   display: flex;
+   line-height: 2.8;
+   overflow: hidden;
+   background-color: #060606;
+   margin: 0 auto;
+   padding: 0 5% 2px;
+   max-width: 1500px;
+   }
+   .mcafeeHeader .MHtopnav a {
+   float: left;
+   display: block;
+   color: #ffff;
+   text-align: center;
+   padding: 14px 15px;
+   text-decoration: none;
+   font-size: 16px;
+   margin-top: 0px;
+   }
+   .mcafeeHeader .active {
+   background-color: #04AA6D;
+   color: white;
+   }
+   .mcafeeHeader .MHtopnav .MHicon {
+   display: none;
+   -webkit-transition: all .3s linear;
+   transition: all .3s linear;
+   margin: 0;
+   position: relative;
+   float: right;
+   -webkit-transition: all .3s linear;
+   transition: all .3s linear;
+   display: none;
+   }
+   .mcafeeHeader .MHnav-wrap {
+   flex: 1;
+   padding: 5px 5px 0 5%;
+   }
+   .mcafeeHeader #MHnavItems{
+   justify-content: space-between;
+   display: flex;
+   margin: 0 65px 0 0;
+   }
+   .mcafeeHeader .MHdropdown {
+   float: left;
+   overflow: hidden;
+   margin-top: 9px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   cursor: pointer;
+   font-size: 16px;
+   border: none;
+   outline: none;
+   color: white;
+   padding: 16px 16px;
+   background-color: inherit;
+   font-family: inherit;
+   margin: 0;
+   }
+   .mcafeeHeader .MHdropdown.MHopen #MHdropbtnAbout, .mcafeeHeader .MHdropdown.MHopen #MHdropbtnSupport{
+   position: relative;
+   }
+   .mcafeeHeader .MHdropdown.MHopen #MHdropbtnAbout:after, .mcafeeHeader .MHdropdown.MHopen #MHdropbtnSupport:after{
+   content: '';
+   position: absolute;
+   left: 32%;
+   top: 96%;
+   width: 0;
+   height: 0;
+   border-left: 10px solid transparent;
+   border-right: 10px solid transparent;
+   border-bottom: 10px solid #262626;
+   clear: both;
+   }
+   .mcafeeHeader .fa {
+   vertical-align: 2px;
+   font-size: 10px;
+   }
+   #MHtnav9 .fa{
+   vertical-align: 10px;
+   }
+   #MHblogBtn {
+   padding-left: 0px !important;
+   }
+   .mcafeeHeader .MHdropdown-content {
+   display: none;
+   margin-top: 17px;
+   position: absolute;
+   left: 0;
+   width: 160px;
+   background-color: #f9f9f9;
+   width: 100%;
+   z-index: 1;
+   }
+   .mcafeeHeader .MHfirst-dropdown {
+   margin-top: 8px;
+   display: none;
+   opacity: -1;
+   transition: 6s;
+   -webkit-transition: all .6s;
+   -moz-transition: all .6s;
+   -ms-transition: all .6s;
+   -o-transition: all .6s;
+   transition: all .6s;
+   background-color: #262626;
+   }
+   .mcafeeHeader .MHdropdownMain {
+   display: block;
+   opacity: 1;
+   }
+   .mcafeeHeader .MHfirst-dropdown .MHrow {
+   width: 1200px;
+   margin: 0 auto;
+   }
+   .mcafeeHeader .MHdropdown-content a {
+   float: none;
+   color: black;
+   padding: 12px 16px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+   line-height: 2;
+   font-size: 14px;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader .MHfirst-dropdown {
+   margin-left: 100%;
+   position: fixed !important;
+   }
+   .mcafeeHeader #MHtnav9{
+   margin: 0;
+   }
+   .mcafeeHeader .MHmoreToggle.MHopen.show {
+   margin: -14px 41px !important;
+   position: fixed;
+   top: 45px;
+   left: 30px;
+   }
+   }
+   .mcafeeHeader .MHfirst-dropdown-fixer {
+   margin-left: 0%;
+   }
+   .mcafeeHeader .MHmoreToggle {
+   margin-left: -26.5em !important;
+   }
+   .mcafeeHeader .show {
+   display: block !important;
+   }
+   .mcafeeHeader .MHtopnav a:hover,
+   .MHdropdown:hover .MHdropbtn {
+   color: rgb(207, 207, 207);
+   }
+   .mcafeeHeader .MHdropdown-toggle {
+   margin-top: 26px !important;
+   color: #fff;
+   text-decoration: none;
+   white-space: nowrap;
+   display: flex;
+   align-items: center;
+   padding: 0px !important;
+   cursor: pointer;
+   }
+   .mcafeeHeader #MHtnav9 .MHdropdown-toggle span {
+   display: none;
+   }
+   .mcafeeHeader #MHtnav9 .MHdropdown-toggle svg {
+   -webkit-transition: all .3s ease all;
+   transition: .3s ease all;
+   }
+   .mcafeeHeader .moreTrans svg {
+   transform: rotate(90deg);
+   -webkit-transform: rotate(90deg);
+   }
+   .mcafeeHeader .MHdropdown-more {
+   display: none;
+   margin-top: 1px;
+   position: absolute;
+   left: 75%;
+   width: 160px;
+   background-color: #262626;
+   width: 25%;
+   box-shadow: 0px 8px 16px 0px rgb(0 0 0 / 20%);
+   z-index: 1;
+   height: 100vh;
+   }
+   .mcafeeHeader .MHdropdown-more .MHcolumn {
+   width: 100%;
+   padding: 77px 27px;
+   }
+   .mcafeeHeader .MHdropdown-more .MHcolumn a:not(:last-child) {
+   border-bottom: 1px #6a6767 solid;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn ul>li:not(:last-child) {
+   border-bottom: 1px #6a6767 solid;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn ul>li {
+   padding: 7px;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn ul>li>a {
+   margin-left: 17px;
+   }
+   .mcafeeHeader .MHdropMenu {
+   height: 100%;
+   width: 23%;
+   left: 100%;
+   position: fixed;
+   margin-top: 0px;
+   transition: 2s;
+   display: block;
+   -webkit-transition: all .3s;
+   -moz-transition: all .3s;
+   -ms-transition: all .3s;
+   -o-transition: all .3s;
+   transition: all .3s;
+   }
+   .mcafeeHeader .menuTrans {
+   left: 77% !important;
+   }
+   .mcafeeHeader .MHdropMenu .MHrow {
+   height: 100%;
+   width: 101%;
+   padding: 74px 2px;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn {
+   width: 100%;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn ul {
+   padding-left: 0px;
+   list-style-type: none;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader .MHdropMenu {
+   padding: 0% 41% 0% 0%;
+   position: fixed !important;
+   background-color: #343333;
+   }
+   .mcafeeHeader .MHdropMenu .MHcolumn ul>li {
+   border-bottom: none !important;
+   }
+   .mcafeeHeader .MHdropMenu .MHrow {
+   width: 1024px;
+   margin-top: 0px;
+   padding: 0% 0%;
+   }
+   }
+   .mcafeeHeader .MHbar1,
+   .MHbar2,
+   .MHbar3 {
+   width: 27px;
+   height: 1px;
+   background-color: #ffff;
+   margin: 7px 0;
+   transition: 0.4s;
+   -webkit-transition: all .5s linear;
+   transition: all .5s linear;
+   }
+   .mcafeeHeader .change .MHbar1 {
+   -webkit-transform: rotate(-45deg) translate(-4px, 6px);
+   transform: rotate(-45deg) translate(-4px, 6px);
+   }
+   .mcafeeHeader .change .MHbar2 {
+   opacity: 0;
+   }
+   .mcafeeHeader .change .MHbar3 {
+   -webkit-transform: rotate(45deg) translate(-5px, -7px);
+   transform: rotate(45deg) translate(-5px, -7px);
+   }
+   .moreWhileSmall{
+   top: 6.50rem !important;
+   left: 30rem !important;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader .MHtopnav a,
+   .MHdropdown .MHdropbtn,
+   .MHicons-wrap {
+   display: none;
+   }
+   .mcafeeHeader .MHtopnav a.MHicon {
+   float: right;
+   display: block;
+   }
+   .mcafeeHeader .MHtopnav .MHicon {
+   position: absolute;
+   right: 10px;
+   top: 0px;
+   float: right;
+   display: block;
+   padding: 15px;
+   }
+   }
+   .mcafeeHeader .MHlogo-wrap {
+   margin-left: -1px;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader .MHtopnav.responsive {
+   background-color: #333 !important;
+   height: 100vh;
+   position: relative;
+   }
+   .mcafeeHeader .MHtopnav.responsive .MHicon {
+   position: absolute;
+   right: 0;
+   top: 0;
+   }
+   .mcafeeHeader .MHnavItem {
+   margin: 0px 40px;
+   padding: 0px 17px !important;
+   margin-left: 24px;
+   }
+   #MHtnav9{
+   margin-left: 22%;
+   }
+   #MHblogBtn{
+   padding-left: 22% !important;
+   }
+   .mcafeeHeader #loginbtn{
+   font-size: 23px !important;
+   }
+   .mcafeeHeader .MHtopnav.responsive a {
+   font-size: 1.5em;
+   float: none;
+   display: block;
+   text-align: left;
+   }
+   .mcafeeHeader .MHtopnav.responsive a:not(:first-child) {
+   padding: 0px 20px;
+   margin-top: 0px;
+   }
+   .mcafeeHeader .MHtopnav.responsive .MHdropdown {
+   float: none;
+   margin: -14px 41px;
+   }
+   .mcafeeHeader .MHtopnav.responsive .MHdropdown-content {
+   position: relative;
+   }
+   .mcafeeHeader .MHtopnav.responsive .MHdropdown .MHdropbtn {
+   font-size: 1.5em;
+   display: block;
+   width: 100%;
+   text-align: left;
+   margin-top: 10px;
+   }
+   .mcafeeHeader .MHtopnav.responsive #MHnavItems{
+   margin-left: -5% !important;
+   padding-left: 0% !important;
+   border-bottom: 1px solid #666;
+   display:block;
+   padding-bottom: 6%;
+   }
+   .mcafeeHeader .MHlogo-wrap {
+   margin-left: -6%;
+   margin-top: 16px;
+   }
+   .mcafeeHeader .MHdropdown-content {
+   min-height: calc(95vh - 40px);
+   margin-top: 0px;
+   height: 200px;
+   overflow: auto;
+   }
+   .mcafeeHeader .MHrow {
+   background-color: #333 !important;
+   position: relative;
+   padding-left: 7% !important;
+   display: grid !important;
+   grid-template-MHrows: auto;
+   padding-top: 0px !important;
+   }
+   .mcafeeHeader .MHicons-wrap {
+   line-height: 1.5;
+   display: block;
+   margin: 0;
+   position: absolute;
+   left: 65px ;
+   top: 36em ;
+   }
+   .mcafeeHeader .menuTrans {
+   left: 10% !important;
+   }
+   .mcafeeHeader .MHlogo-wrap .MHlogo {
+   margin: 1px 0px 14px 24px !important;
+   }
+   }
+   @media only screen
+   and (max-width : 600px) {
+   .mcafeeHeader .MHicons-wrap {
+   left: 65px ;
+   top: 36em ;
+   }
+   }
+   @media screen and (max-width: 600px){
+   }
+   .mcafeeHeader .MHlogo-wrap .MHlogo {
+   display: block;
+   text-indent: -999px;
+   display: block;
+   height: 22px;
+   width: 108px;
+   padding: 1px;
+   margin: 23px 0;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader .MHcolumn {
+   height: auto !important;
+   width: 100% !important;
+   padding: 12px !important;
+   }
+   .mcafeeHeader .MHcolumn:not(:last-child) {
+   border-bottom: 1px #6a6767 solid;
+   }
+   .mcafeeHeader .MHcolumn h3 {
+   border: none !important;
+   font-size: 1.2em !important;
+   margin-bottom: 0px !important;
+   padding: 0px 0px !important;
+   }
+   .mcafeeHeader .MHcolumn a {
+   padding-left: 0px !important;
+   }
+   }
+   .mcafeeHeader .MHrow {
+   display: flex;
+   background-image: none;
+   background-color: #262626;
+   color: white;
+   padding: 40px 25px 60px;
+   }
+   .mcafeeHeader .MHcolumn {
+   float: left;
+   width: 33.33%;
+   }
+   .mcafeeHeader .MHcolumn h3 {
+   border-bottom: 1px solid #a90202;
+   font-size: 16px;
+   margin: 0 50px 20px 0;
+   line-height: 2;
+   }
+   .mcafeeHeader .MHcolumn a {
+   float: none;
+   color: white;
+   padding: 0px;
+   text-decoration: none;
+   display: block;
+   text-align: left;
+   }
+   .mcafeeHeader .MHrow:after {
+   content: "";
+   display: table;
+   clear: both;
+   }
+   .mcafeeHeader .MHicons-wrap {
+   margin-right: 65px;
+   }
+   .mcafeeHeader .MHentlink {
+   margin-top: 19px !important;
+   padding: 0px 3.05em !important;
+   font-size: 14px;
+   }
+   .mcafeeHeader #loginbtn {
+   border: 1px solid #fff;
+   border-radius: 26px;
+   padding: 3px 30px !important;
+   margin-right: 28px;
+   margin-top: 25px !important;
+   font-size: 14px;
+   line-height: 1.8;
+   display: inline-block;
+   text-align: center;
+   }
+   .mcafeeHeader #MHtnav9 {
+   padding-bottom: 0;
+   background: none;
+   margin-top: 2px !important;
+   }
+   @media screen and (max-width: 1024px) {
+   .mcafeeHeader #MHtnav9 .MHdropdown-toggle {
+   font-size: 1.2em;
+   margin: 0;
+   margin-top: 0px !important;
+   }
+   .mcafeeHeader .MHentlink {
+   padding: 0px;
+   padding-left: 40px !important;
+   margin: 0px;
+   }
+   .mcafeeHeader #MHtnav9 .MHdropdown-toggle span {
+   margin-top: 20px;
+   font-size: 23px;
+   padding: 15px 0 15px 27px;
+   display: inline-block;
+   }
+   .mcafeeHeader #MHtnav9 .MHdropdown-toggle svg {
+   display: none;
+   }
+   .mcafeeHeader .MHopen .MHdropdown-menu {
+   padding-left: 0;
+   overflow: hidden;
+   padding-right: 0;
+   min-width: 320px;
+   margin-top: 20px;
+   background: #262626;
+   padding: 1rem 5rem 1rem 1rem;
+   }
+   .mcafeeHeader .MHdropdown-menu.show li {
+   border-bottom: 1px solid #939598;
+   padding: 7px;
+   }
+   }
+   .mcafeeHeader .MHclose-slide-menu {
+   position: absolute;
+   top: 0;
+   right: 0;
+   color: #fff;
+   padding: 20px;
+   font-size: 40px;
+   line-height: 15px;
+   cursor: pointer;
+   font-family: serif;
+   margin-top: 1px;
+   }
+   .mcafeeHeader .MHmoreSvg {
+   transition: width 2s, height 2s, transform 2s;
+   -webkit-transition: width 2s, height 2s, transform 2s;
+   }
+   .MHfirst-dropdown .MHcolumn a:hover{
+   color:red
+   }
+   .mcafeeHeader #MHcloseSlideMenu .fa {
+   font-size: 42px;
+   }
+   .mcafeeHeader #MHcloseSlideMenu .fa:before {
+   content: '\00d7';
+   }
+   @media screen and (max-width: 1460px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav #MHnavItems a.MHnavItem {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 12px;
+   }
+   }
+   @media (max-width: 1370px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav #MHnavItems a.MHnavItem {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 8px;
+   }
+   }
+   @media screen and (max-width: 1198.99px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav #MHnavItems a.MHnavItem {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 0px;
+   }
+   }
+   @media (max-width: 1190px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav a {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 0px;
+   }
+   }
+   @media screen and (max-width: 1100px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav #MHnavItems a.MHnavItem {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 0px;
+   }
+   }
+   @media (max-width: 1090px){
+   .mcafeeHeader #MHnavItems {
+   margin: 0 0px 0 0;
+   }
+   .mcafeeHeader .MHtopnav #MHnavItems a.MHnavItem {
+   padding: 14px 0px;
+   }
+   .mcafeeHeader .MHdropdown .MHdropbtn {
+   padding: 16px 0px;
+   }
+   }
+</style>
+<div class="mcafeeHeader">
+   <div class="MHtopnav" id="MHmytopnav">
+      <div class="MHnav-wrap" id="MHnavWrap">
+         <div class="MHlogo-wrap"><a href="https://www.mcafee.com/en-us/index.html" data-navelement="companyMHlogo" data-pagesection="top nav" class="MHlogo" style="background: url('https://www.mcafee.com/content/dam/consumer/en/company-logo/logo-white.svg') no-repeat center bottom; cursor: pointer;">McAfee</a></div>
+         <div id="MHnavItems">
+            <div></div>
+            <a class="MHnavItem" href="https://www.mcafee.com/en-us/antivirus/mcafee-total-protection.html" target="_self">Total Protection</a> 
+            <a class="MHnavItem" href="https://www.mcafee.com/en-us/antivirus.html" target="_self">Antivirus</a> 
+            <a class="MHnavItem" href="https://www.mcafee.com/en-us/identity-theft/protection.html" target="_self">Identity</a>
+            <a class="MHnavItem" href="https://www.mcafee.com/en-us/vpn.html" target="_self">VPN</a>
+            <div class="MHdropdown" id="MHdropdown_about">
+               <button class="MHdropbtn MHdropbtnAbout" id="MHdropbtnAbout" onclick="mcafee_DropClick('MHmydropdown')">About <i class="fa fal fa-angle-down" id="MHuparrow1"></i> </button>
+               <div class="MHdropdown-content MHfirst-dropdown" id="MHmydropdown">
+                  <div class="MHrow">
+                     <div class="MHcolumn">
+                        <h3>Our Company</h3>
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/about/awards.html" target="_self">Awards and Reviews</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/about.html" target="_self">About Us</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/about.html#executive-team" target="_self">Executive Team</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/newsroom.html" target="_self">Newsroom</a> 
+                     </div>
+                     <div class="MHcolumn">
+                        <h3>Our Efforts</h3>
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/inclusion-diversity.html" target="_self" rel="noopener">Inclusion &amp; Diversity</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/integrity-ethics.html" target="_self" rel="noopener">Integrity &amp; Ethics</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/policy/legal/public-policy.html" target="_self" rel="noopener">Public Policy</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-corporate/mcafee-labs.html" target="_self" rel="noopener">McAfee Labs Threat Center</a> 
+                     </div>
+                     <div class="MHcolumn">
+                        <h3>Join Us</h3>
+                        <a class="MHdropdown-item" href="https://careers.mcafee.com/" target="_blank" rel="noopener">Search Job Openings</a> 
+                        <a class="MHdropdown-item" href="https://careers.mcafee.com/life-at-mcafee" target="_blank" rel="noopener">Life at McAfee</a> 
+                        <a class="MHdropdown-item" href="https://careers.mcafee.com/our-teams" target="_blank" rel="noopener">Our Teams</a> 
+                        <a class="MHdropdown-item" href="https://careers.mcafee.com/our-locations" target="_blank" rel="noopener">Our Locations</a> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="MHdropdown" id="MHdropdown_support">
+               <button class="MHdropbtn MHdropbtnSupport" id="MHdropbtnSupport" onclick="mcafee_DropClick('MHmydropdownSupport');">Support <i class="fa fa-angle-down" id="MHuparrow2"></i> </button>
+               <div class="MHdropdown-content MHfirst-dropdown" id="MHmydropdownSupport">
+                  <div class="MHrow">
+                     <div class="MHcolumn">
+                        <h3>Help</h3>
+                        <a class="MHdropdown-item" href="https://service.mcafee.com/webcenter/portal/cp" target="_self" rel="noopener">Consumer Support</a> 
+                        <a class="MHdropdown-item" href="https://forums.mcafee.com/" target="_self" rel="noopener">Community</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/activate-product-key.html">Activate your Retail Card</a> 
+                     </div>
+                     <div class="MHcolumn">
+                        <h3>Learn more about Security</h3>
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/antivirus/free.html" target="_self" rel="noopener">Free Antivirus Trial</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/antivirus/malware.html" target="_self" rel="noopener">Malware</a> <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/antivirus/firewall.html" target="_self" rel="noopener">Firewall</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/safe-browser/mcafee-webadvisor.html" target="_self" rel="noopener">Safe Browser</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/vpn/android-iphone.html" target="_self" rel="noopener">VPN for Phones</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/parental-controls.html" target="_self" rel="noopener">Parental Controls</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/antivirus/mobile.html" target="_self" rel="noopener">Mobile Security</a>
+                     </div>
+                     <div class="MHcolumn">
+                        <h3>More Resources</h3>
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/2020-mobile-threat-report.html" target="_blank" rel="noopener">2020 Mobile Threat Report</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/press-pause-on-risky-downloads.html" target="_blank">Press Pause on Risky Downloads</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/2020-most-dangerous-celebrity.html" target="_blank">Most Dangerous Celebrity Searches</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/for-home/from-home.html" target="_blank">Supporting You and Your Community</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/for-home/from-home.html" target="_blank">Hackable? Podcast</a> 
+                        <a class="MHdropdown-item" href="https://www.mcafee.com/en-us/consumer-support/safety-tips.html" target="_blank">Safety Tips</a> 
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <a class="MHnavItem" href="https://ir.mcafee.com/" target="_self">Investors</a>
+            <div class="MHicon" id="MHmenuicon" onclick="mcafee_MainMenuClick()">
+               <div class="MHbar1"></div>
+               <div class="MHbar2"></div>
+               <div class="MHbar3"></div>
+            </div>
+            <i class="fa fal fa-angle-down " id="MHuparrow3"></i>
+         </div>
+      </div>
+      <div class="MHicons-wrap" id="MHiconsWrap">
+         <div>
+            <a id="MHblogBtn" href="https://www.mcafee.com/blogs" class="MHentlink" target="_blank">Blog</a>
+            <a id="loginbtn" href="https://home.mcafee.com/Secure/MyAccount/DashBoard.aspx?culture=en-us" class="MHentlink" target="_blank">Login</a>
+            <div id="MHtnav9" class="MHdropdown open show">
+               <a class="MHdropdown-toggle" id="moreMHicon" onclick=" event.stopPropagation(); event.cancelBubble = true; macfee_MoreOpenFunction();">
+                  <span>More </span> 
+                  <svg xmlns="https://www.w3.org/2000/svg" version="1.1" width="29" height="29" class="MHmoreSvg" viewBox="0 0 768 768">
+                     <path fill="#fff" d="M511.5 640.5v-129h129v129h-129zM511.5 448.5v-129h129v129h-129zM319.5 256.5v-129h129v129h-129zM511.5 127.5h129v129h-129v-129zM319.5 448.5v-129h129v129h-129zM127.5 448.5v-129h129v129h-129zM127.5 640.5v-129h129v129h-129zM319.5 640.5v-129h129v129h-129zM127.5 256.5v-129h129v129h-129z" class="MHpathicon">
+                     </path>
+                  </svg>
+                  <i class="fa fal fa-angle-down" id="MHmoreiconFa"></i>
+               </a>
+               <div class="MHdropdown-content MHdropMenu" id="MHmoreMenu">
+                  <span class="MHclose-slide-menu" id="MHcloseSlideMenu" onclick="macfee_CloseMenuFunction();"><i class="fa fa-close"></i></span>
+                  <div class="MHrow">
+                     <div class="MHcolumn">
+                        <ul>
+                           <li> 
+                              <a data-navelement="more|myaccount" data-pagesection="top nav" href="https://home.mcafee.com/Secure/MyAccount/DashBoard.aspx?culture=en-us" target="_self">My Account</a> 
+                           </li>
+                           <li> 
+                              <a data-navelement="more|redeem" data-pagesection="top nav" href="https://www.mcafee.com/en-us/consumer-support/activate-product-key.html" target="_self">Activate your Retail Card</a> 
+                           </li>
+                           <li> 
+                              <a data-navelement="more|webadvisor" data-pagesection="top nav" href="https://www.mcafee.com/en-us/safe-browser/mcafee-webadvisor.html" target="_self">Safe Browser</a>
+                           </li>
+                           <li> 
+                              <a data-navelement="more|gaming" data-pagesection="top nav" href="https://www.mcafee.com/en-us/antivirus/gaming.html" target="_self">Gaming Antivirus</a>
+                           </li>
+                           <li>
+                              <a data-navelement="more|tech" data-pagesection="top nav" href="https://techmaster.mcafee.com/Subscription" target="_self">TechMaster Concierge</a>
+                           </li>
+                           <li>
+                              <a data-navelement="more|identity" data-pagesection="top nav" href="https://www.mcafee.com/en-us/identity-theft/protection.html" target="_self">Identity Protection Service</a>
+                           </li>
+                           <li>
+                              <a data-navelement="more|freedownload" data-pagesection="top nav" href="https://www.mcafee.com/en-us/antivirus/downloads.html" target="_self">Free Downloads</a>
+                           </li>
+                           <li>
+                              <a data-navelement="more|enterprise" data-pagesection="top nav" href="https://www.mcafee.com/enterprise/en-us/home.html" target="_blank">McAfee Enterprise</a>
+                           </li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+   var MHmydropdown = document.getElementById("MHmydropdown");
+   var MHmydropdownSupport = document.getElementById("MHmydropdownSupport");
+   var arMHrow1 = document.getElementById("MHuparrow1");
+   var arMHrow2 = document.getElementById("MHuparrow2");
+   var x = document.getElementById("MHmytopnav");
+   var MHdropbtnAbout = document.getElementById("MHdropbtnAbout");
+   var MHdropbtnSupport = document.getElementById("MHdropbtnSupport");
+   var MHnavItem = document.getElementsByClassName("MHnavItem");
+   var MHmoreMenu = document.getElementById("MHmoreMenu");
+   var MHnavWrap = document.getElementById("MHnavWrap");
+   var MHcloseSlideMenu = document.getElementById("MHcloseSlideMenu");
+   var loginbtn = document.getElementById("loginbtn");
+   var MHblogBtn=document.getElementById("MHblogBtn");
+   var moreMHicon = document.getElementById("moreMHicon");
+   var MHiconsWrap=document.getElementById("MHiconsWrap");
+   var MHnavItems=document.getElementById("MHnavItems");
+   var MHdropdown_about=document.getElementById("MHdropdown_about");
+   var MHdropdown_support=document.getElementById("MHdropdown_support");
+    
+   var windowSize = window.outerWidth;
+   var windowResize;
+   
+   function closeOpenMenus(currentTarget) {
+   	if(currentTarget == "more") {
+   		if(document.getElementById("MHmydropdown").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdown")
+   		}
+   		if(document.getElementById("MHmydropdownSupport").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdownSupport")
+   		}
+   	} else if(currentTarget == "MHmydropdown") {
+   		if(document.getElementById("MHmydropdownSupport").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdownSupport")
+   		}
+   		if(document.getElementById("MHtnav9").classList.contains("moreTrans")) {
+   			mcafee_closeMHmoreMenu()
+   		}
+   	} else if(currentTarget == "MHmydropdownSupport") {
+   		if(document.getElementById("MHmydropdown").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdown")
+   		}
+   		if(document.getElementById("MHtnav9").classList.contains("moreTrans")) {
+   			mcafee_closeMHmoreMenu()
+   		}
+   	}
+   }
+   
+   function macfee_MoreOpenFunction() {
+   	closeOpenMenus("more");
+   	document.getElementById("MHtnav9").classList.toggle("moreTrans");
+   	MHmoreMenu.classList.toggle("menuTrans");
+   	windowSize = window.innerWidth;
+   
+   	if(x.classList.contains('responsive')) {
+   		if(windowSize<601){
+   			MHiconsWrap.classList.add("moreWhileSmall");
+   		}
+   		MHnavItems.style.borderBottom="none";
+   		document.getElementById("MHtnav9").classList.toggle("MHmoreToggle");
+   		MHmoreMenu.classList.toggle("MHdropMenuRes");
+   		if(MHmoreMenu.classList.contains("MHdropMenuRes")) {
+   			for(var i = 0; i < MHnavItem.length; i++) {
+   				MHnavItem[i].style.display = "none";
+   			}
+   			MHdropbtnSupport.style.display = "none";
+   			MHdropbtnAbout.style.display = "none";
+   			MHcloseSlideMenu.style.display = "none";
+   			loginbtn.style.display = "none";
+   			MHblogBtn.style.display = "none";
+   		} else {
+   			if(windowSize<601){
+   			MHiconsWrap.classList.remove("moreWhileSmall");
+   		}
+   		MHnavItems.style.borderBottom="1px solid #666";
+   
+   			for(var i = 0; i < MHnavItem.length; i++) {
+   				MHnavItem[i].style.display = "block";
+   			}
+   			MHdropbtnSupport.style.display = "block";
+   			MHdropbtnAbout.style.display = "block";
+   			MHcloseSlideMenu.style.display = "block";
+   			loginbtn.style.display = "block";
+   			MHblogBtn.style.display = "block";
+   
+   		}
+   	}
+   	document.getElementById("MHmoreiconFa").classList.toggle("fa-angle-right");
+   	document.getElementById("MHmoreiconFa").classList.toggle("fa-angle-left");
+   }
+   
+   function mcafee_closeMHmoreMenu() {
+   	document.getElementById("MHtnav9").classList.toggle("moreTrans");
+   	MHmoreMenu.classList.toggle("menuTrans");
+   	windowSize = window.innerWidth;
+   
+   	if(x.classList.contains('responsive')) {
+   		
+   		MHnavWrap.style.display = "block";
+   	}
+   
+   	loginbtn.style.display = "block";
+   	moreMHicon.style.display = "block";
+   	MHblogBtn.style.display = "block";
+   }
+   
+   function macfee_CloseMenuFunction() {
+   	
+   	mcafee_closeMHmoreMenu();
+   
+   	MHmydropdown.classList.remove("MHdropdownMain");
+   	MHmydropdownSupport.classList.remove("MHdropdownMain");
+   	if(MHmydropdown.classList.contains("MHfirst-dropdown-fixer")) {
+   		MHmydropdown.classList.remove("MHfirst-dropdown-fixer");
+   	}
+   	if(MHmydropdownSupport.classList.contains("MHfirst-dropdown-fixer")) {
+   		MHmydropdownSupport.classList.remove("MHfirst-dropdown-fixer");
+   	}
+   }
+   
+   function resize() {
+   	windowResize = window.outerWidth;
+   	if(windowSize > 1024) {
+   		if(windowResize < 1024) {
+   			windowSize = windowResize;
+   			MHmoreMenu.classList.remove("menuTrans");
+   			if(MHmoreMenu.classList.contains("MHdropMenuRes")) {
+   				MHmoreMenu.classList.remove("MHdropMenuRes");
+   			}
+   			if(!x.classList.contains("responsive")) {
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "none";
+   				}
+   				MHdropbtnAbout.style.display = "none";
+   				MHdropbtnSupport.style.display = "none";
+   				MHcloseSlideMenu.style.display = "none";
+   			} else {
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "block";
+   				}
+   				MHdropbtnAbout.style.display = "block";
+   				MHdropbtnSupport.style.display = "block";
+   				MHcloseSlideMenu.style.display = "block";
+   				loginbtn.style.display = "block";
+   				MHblogBtn.style.display = "block";
+   
+   			}
+   			if(arMHrow1.classList.contains("fa-angle-down")) {
+   				arMHrow1.classList.toggle("fa-angle-right");
+   			}
+   			if(arMHrow2.classList.contains("fa-angle-down")) {
+   				arMHrow2.classList.toggle("fa-angle-right");
+   			}
+   			if(MHmydropdownSupport.classList.contains('MHdropdownMain')) {
+   				MHmydropdownSupport.classList.remove('MHdropdownMain');
+   				arMHrow2.classList.toggle("fa-angle-up");
+   				arMHrow2.classList.toggle("fa-angle-down");
+   			}
+   			if(MHmydropdown.classList.contains('MHdropdownMain')) {
+   				MHmydropdown.classList.remove('MHdropdownMain');
+   				arMHrow1.classList.toggle("fa-angle-up");
+   				arMHrow1.classList.toggle("fa-angle-down");
+   			}
+   		} 
+   	} else {
+   		if(windowResize > 1024) {
+   			windowSize = windowResize;
+   			
+   			x.classList.remove('responsive');
+   			
+   			if(document.getElementById("MHmenuicon").classList.contains("change")) {
+   				document.getElementById("MHmenuicon").classList.remove("change");
+   			}
+   			document.getElementById("MHtnav9").classList.remove("MHmoreToggle");
+   			for(var i = 0; i < MHnavItem.length; i++) {
+   				MHnavItem[i].style.display = "block";
+   			}
+   			MHdropbtnAbout.style.display = "block";
+   			MHdropbtnSupport.style.display = "block";
+   			MHcloseSlideMenu.style.display = "block";
+   			loginbtn.style.display = "block";
+   			MHblogBtn.style.display = "block";
+   
+   			if(arMHrow1.classList.contains("fa-angle-right") || arMHrow1.classList.contains("fa-angle-left")) {
+   				arMHrow1.classList.remove("fa-angle-right");
+   				arMHrow1.classList.remove("fa-angle-left");
+   				arMHrow1.classList.add("fa-angle-down");
+   			}
+   			if(arMHrow2.classList.contains("fa-angle-right") || arMHrow2.classList.contains("fa-angle-left")) {
+   				arMHrow2.classList.remove("fa-angle-right");
+   				arMHrow2.classList.remove("fa-angle-left");
+   				arMHrow2.classList.add("fa-angle-down");
+   			}
+   		}
+   	}
+   }
+   window.onresize = resize;
+   
+   function mcafee_MainMenuClick() {
+   	windowSize=window.innerWidth;
+   	document.getElementById("MHmenuicon").classList.toggle("change");
+   	if(arMHrow1.classList.contains("fa-angle-down")) {
+   		arMHrow1.classList.toggle("fa-angle-down");
+   		arMHrow1.classList.add("fa-angle-right");
+   	} else {
+   		arMHrow1.classList.add("fa-angle-right");
+   	}
+   	if(arMHrow2.classList.contains("fa-angle-down")) {
+   		arMHrow2.classList.toggle("fa-angle-down");
+   		arMHrow2.classList.add("fa-angle-right");
+   	} else {
+   		arMHrow2.classList.add("fa-angle-right");
+   	}
+   	if(x.className === "MHtopnav") {
+   		x.className += " responsive";
+   		for(var i = 0; i < MHnavItem.length; i++) {
+   			MHnavItem[i].style.display = "block";
+   		}
+   		if(windowSize<601){
+   			MHiconsWrap.classList.remove("moreWhileSmall");
+   		}
+   		MHdropbtnAbout.style.display = "block";
+   		MHdropbtnSupport.style.display = "block";
+   		MHcloseSlideMenu.style.display = "block";
+   		loginbtn.style.display = "block";
+   		moreMHicon.style.display = "block";
+   		MHblogBtn.style.display = "block";
+   		MHnavItems.style.borderBottom="1px solid #666";
+   
+   
+   		if(document.getElementById("MHtnav9").classList.contains("MHmoreToggle")) {
+   			document.getElementById("MHtnav9").classList.remove("MHmoreToggle");
+   		}
+   	} else {
+   		x.className = "MHtopnav";
+   		for(var i = 0; i < MHnavItem.length; i++) {
+   			MHnavItem[i].style.display = "none";
+   		}
+   		MHdropbtnAbout.style.display = "none";
+   		MHdropbtnSupport.style.display = "none";
+   		MHcloseSlideMenu.style.display = "none";
+   		MHmoreMenu.classList.remove("menuTrans");
+   		MHnavItems.style.borderBottom="none";
+   
+   		if(MHmoreMenu.classList.contains("MHdropMenuRes")) {
+   			MHmoreMenu.classList.remove("MHdropMenuRes");
+   		}
+   	}
+   	if(MHmydropdown.classList.contains("MHfirst-dropdown-fixer")) {
+   		MHmydropdown.classList.remove("MHfirst-dropdown-fixer");
+   	}
+   	if(MHmydropdownSupport.classList.contains("MHfirst-dropdown-fixer")) {
+   		MHmydropdownSupport.classList.remove("MHfirst-dropdown-fixer");
+   	}
+   }
+   
+   function mcafee_DropClick(econtentId) {
+   	windowSize = window.outerWidth;
+   	closeOpenMenus(econtentId);
+   	if(document.getElementById(econtentId).style.opacity == 1) {
+   		mcafeeHeaderfadeOut(document.getElementById(econtentId), 4, "MHdropdownMain")
+   	} else {
+   		mcafeeHeaderfadeIn(document.getElementById(econtentId), 4)
+   	}
+   	document.getElementById(econtentId).classList.toggle("MHdropdownMain");
+   
+   	arMHrow1.parentElement.parentElement.classList.remove("MHopen");
+   	arMHrow2.parentElement.parentElement.classList.remove("MHopen");
+   	if(document.getElementById(econtentId).classList.contains("MHdropdownMain")) {
+   		document.getElementById(econtentId).parentElement.classList.add("MHopen");
+   	}
+   	
+   	if(econtentId == "MHmydropdown") {
+   		if(x.classList.contains('responsive')) {
+   			document.getElementById(econtentId).classList.toggle("MHfirst-dropdown-fixer");
+   			arMHrow1.classList.toggle("fa-angle-right");
+   			arMHrow1.classList.toggle("fa-angle-left");
+   			if(MHmydropdown.classList.contains("MHdropdownMain")) {
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "none";
+   				}
+   				MHdropbtnSupport.style.display = "none";
+   				moreMHicon.style.display = "none";
+   				loginbtn.style.display = "none";
+   				MHblogBtn.style.display = "none";
+   				MHnavItems.style.borderBottom="1px solid #666";
+   
+   
+   			} else {
+   				MHnavItems.style.borderBottom="none";
+   
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "block";
+   				}
+   				MHdropbtnSupport.style.display = "block";
+   				moreMHicon.style.display = "block";
+   				loginbtn.style.display = "block";
+   				MHblogBtn.style.display = "block";
+   
+   			}
+   		} else {
+   			arMHrow1.classList.toggle("fa-angle-up");
+   			arMHrow1.classList.toggle("fa-angle-down");
+   		}
+   		if(MHmydropdownSupport.classList.contains('MHdropdownMain')) {
+   			MHmydropdownSupport.classList.remove('MHdropdownMain');
+   			arMHrow2.classList.toggle("fa-angle-up");
+   			arMHrow2.classList.toggle("fa-angle-down");
+   		}
+   	} else {
+   		if(x.classList.contains('responsive')) {
+   			document.getElementById(econtentId).classList.toggle("MHfirst-dropdown-fixer");
+   			arMHrow2.classList.toggle("fa-angle-right");
+   			arMHrow2.classList.toggle("fa-angle-left");
+   			if(MHmydropdownSupport.classList.contains("MHdropdownMain")) {
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "none";
+   				}
+   				MHdropbtnAbout.style.display = "none";
+   				moreMHicon.style.display = "none";
+   				loginbtn.style.display = "none";
+   				MHblogBtn.style.display = "none";
+   
+   			} else {
+   				for(var i = 0; i < MHnavItem.length; i++) {
+   					MHnavItem[i].style.display = "block";
+   				}
+   				MHdropbtnAbout.style.display = "block";
+   				moreMHicon.style.display = "block";
+   				loginbtn.style.display = "block";
+   				MHblogBtn.style.display = "block";
+   
+   			}
+   		} else {
+   			arMHrow2.classList.toggle("fa-angle-up");
+   			arMHrow2.classList.toggle("fa-angle-down");
+   		}
+   		if(MHmydropdown.classList.contains('MHdropdownMain')) {
+   			MHmydropdown.classList.remove('MHdropdownMain');
+   			arMHrow1.classList.toggle("fa-angle-up");
+   			arMHrow1.classList.toggle("fa-angle-down");
+   		}
+   	}
+   }
+   
+   window.onclick = function(e) {
+   	if(e.target.matches('.MHicon')) {
+   		console.log('window button');
+   	} else if(!e.target.matches('.MHdropbtn') && !e.target.matches(".MHpathicon")) {
+   		if(document.getElementById("MHmydropdown").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdown")
+   		}
+   		if(document.getElementById("MHmydropdownSupport").style.opacity == 1) {
+   			mcafee_DropClick("MHmydropdownSupport")
+   		}
+   	}
+   };
+   
+   function mcafeeHeaderfadeIn(elem, ms)
+   {
+     if(!elem) {
+   	return;
+     }
+       
+   
+     elem.style.opacity = 0;
+     elem.style.filter = "alpha(opacity=0)";
+     elem.style.display = "block";
+     elem.style.visibility = "visible";
+   
+     if(ms)
+     {
+       var opacity = 0;
+       var timer = setInterval( function() {
+         opacity += 50 / ms;
+         if( opacity >= 1 )
+         {
+           clearInterval(timer);
+           opacity = 1;
+         }
+         elem.style.opacity = opacity;
+         elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+       }, 50 );
+     }
+     else
+     {
+       elem.style.opacity = 1;
+       elem.style.filter = "alpha(opacity=1)";
+     }
+   }
+   
+   function mcafeeHeaderfadeOut( elem, ms )
+   {
+     if(!elem){
+   	return;
+     }
+       
+     if(ms)
+     {
+       var opacity = 1;
+       var timer = setInterval( function() {
+         opacity -= 50 / ms;
+         if( opacity <= 0 )
+         {
+           clearInterval(timer);
+           opacity = 0;
+           elem.style.display = "none";
+           elem.style.visibility = "hidden";
+         }
+         elem.style.opacity = opacity;
+         elem.style.filter = "alpha(opacity=" + opacity * 100 + ")";
+       }, 50 );
+     }
+     else
+     {
+       elem.style.opacity = 0;
+       elem.style.filter = "alpha(opacity=0)";
+       elem.style.display = "none";
+       elem.style.visibility = "hidden";
+     }
+   }
+</script>
